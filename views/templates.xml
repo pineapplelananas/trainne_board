@@ -1,5 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+   
+        <template id="index">
+            <t t-call="website.layout">
+                <t t-set="title">Home</t>
+                    <div class="oe_structure">
+                        <div class="container">
+                            <h1>My first web page</h1>
+                            <p>Hello, world!</p>
+                        </div>
+                    </div>
+                </t>
+        </template>
+
+         <template id="links">
+           <t t-call="website.layout">
+                <t t-set="title">Odoo tips</t>
+                  
+                    <div class="oe_structure">
+                        <div class="container">
+
+                            <div class="row">
+
+                                <div class="col-sm-3">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="/trainee_board/static/images/odoo.png" alt="Card image cap"/>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Odoo SUDOKEYS</h5>
+                                            <p class="card-text">Click on button to acces the Odoo home Sudokeys.</p>
+                                            <a href="https://odoo11.sudokeys.com/web#home" class="btn btn-primary">Go Odoo Home</a>
+                                        </div>
+                                    </div>
+                                </div>
+                             
+
+                                <div class="col-sm-3">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="/trainee_board/static/images/slack.png" alt="Card image cap"/>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Slack Sudokeys</h5>
+                                            <p class="card-text">Click on button to acces the Slack home Sudokeys.</p>
+                                            <a href="https://sudokeys.slack.com/" class="btn btn-primary">Go Slack Home</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="card" style="width: 18rem;">
+                                        <img class="card-img-top" src="/trainee_board/static/images/gitlab.png" alt="Card image cap"/>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Github Sudokeys</h5>
+                                            <p class="card-text">Click on button to acces the Gitlab home Sudokeys.</p>
+                                            <a href="https://gitlab.sudokeys.com/" class="btn btn-primary">Go Github Home</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            
+                            <div class="container"><h1>Tips Commandes </h1></div>
+                             <div id="exTab1" class="container">	
+                             <ul  class="nav nav-pills">
+                                        <li class="active"><a href="#home">Home</a></li>
+                                <li><a href="#git">Git</a></li>
+                                <li><a href="#odoo">Odoo</a></li>
+                                <li><a href="#system">System</a></li>
+                            </ul>
+
+                            <div class="tab-content clearfix">
+                                <div class="tab-pane active" id="git">
+                            <h3>Content's background color is the same for the tab</h3>
+                                    </div>
+                                    <div class="tab-pane" id="odoo">
+                            <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
+                                    </div>
+                            <div class="tab-pane" id="system">
+                            <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
+                                    </div>
+                            <div class="tab-pane" id="home">
+                            <h3>We use css to change the background color of the content to be equal to the tab</h3>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                        </div>
+                    </div>
+                </t>
+        </template>
+
+         <template id="Git_tips">
+            <t t-call="website.layout">
+                <t t-set="title">Git tips</t>
+                    <div class="oe_structure">
+                        <div class="container">
+                            <h1>Git</h1>
+                            <p>Hello, world!</p>
+                        </div>
+                    </div>
+                </t>
+        </template>
         <!-- <template id="listing"> -->
         <!--   <ul> -->
         <!--     <li t-foreach="objects" t-as="object"> -->
@@ -20,3 +121,4 @@
         <!-- </template> -->
     </data>
 </odoo>
+
