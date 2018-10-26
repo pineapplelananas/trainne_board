@@ -4,11 +4,19 @@ from odoo import http
 class TraineeBoard(http.Controller):
     @http.route('/trainee_board/trainee_board/', auth='public', website=True)
     def index(self, **kw):
-        return http.request.render('trainee_board.index')
+         Teachers = http.request.env['trainee_board.teachers']
+         return http.request.render('trainee_board.index', {
+            'teachers': Teachers.search([])
+        })
 
     @http.route('/trainee_board/home/', auth='public', website=True)
     def links(self, **kw):
         return http.request.render('trainee_board.links')
+
+    @http.route('/trainee_board/<int:id>/', auth='public', website=True)
+    def teacher(self, id):
+        return '<h1>{} ({})</h1>'.format(id, type(id).__name__)
+
 
 #     @http.route('/trainee_board/trainee_board/objects/', auth='public')
 #     def list(self, **kw):

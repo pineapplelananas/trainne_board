@@ -3,16 +3,39 @@
     <data>
    
         <template id="index">
-            <t t-call="website.layout">
-                <t t-set="title">Home</t>
-                    <div class="oe_structure">
-                        <div class="container">
-                            <h1>My first web page</h1>
-                            <p>Hello, world!</p>
-                        </div>
+             <t t-call="website.layout">
+                <t t-set="title">notes</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-foreach="teachers" t-as="teacher">
+                                                       <p><a t-attf-href="/academy/{{ slug(teacher) }}">
+                              <t t-esc="teacher.name"/></a>
+                            </p>
+
+                        </t>
                     </div>
-                </t>
+                </div>
+
+
+            </t>
         </template>
+
+
+        <template id="biography">
+            <t t-call="website.layout">
+                <t t-set="title">notes</t>
+                <div class="oe_structure"/>
+                <div class="oe_structure">
+                    <div class="container">
+                        
+                        <h3><t t-esc="person.name"/></h3>
+
+                    </div>
+                </div>
+                <div class="oe_structure"/>
+            </t>
+        </template>
+
 
          <template id="links">
            <t t-call="website.layout">
@@ -59,6 +82,29 @@
 
                             </div>
 
+                            <div class="col-md-4">
+                            <img class="img img-responsive" src="/trainee_board/static/images/odoo.png" alt="Odoo - Echantillon n°1 pour trois colonnes "/>
+                            <h4 class="mt16 o_default_snippet_text">Odoo Sudokeys</h4>
+                            <p class="o_default_snippet_text">
+                                        connect to odoo home sudokeys !
+                                    </p>
+                            </div>
+                            <div class="col-md-4">
+                            <img class="img img-responsive" src="/trainee_board/static/images/slack.png" alt="Odoo- Echantillon n° 2 pour trois colonnes"/>
+                            <h4 class="mt16 o_default_snippet_text">Slack Sudokeys</h4>
+                            <p class="o_default_snippet_text">
+                                        connect to slack home sudokeys !
+                                    </p>
+                            </div>
+                            <div class="col-md-4">
+                            <img class="img img-responsive" src="/trainee_board/static/images/gitlab.png" alt="Odoo- Echantillon n° 3 pour trois colonnes"/>
+                            <h4 class="mt16 o_default_snippet_text">Gitlab Sudokeys</h4>
+                            <p class="o_default_snippet_text">
+
+                                        connect to gitlab home sudokeys !
+                                    </p>
+                            </div>
+                        
                             
                             <div class="container"><h1>Tips Commandes </h1></div>
                              <div id="exTab1" class="container">	

@@ -13,8 +13,13 @@ from odoo import models, fields, api
 #     @api.depends('value')
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100
-
-class Notes(models.Model):
-    _name = "notes"
+class Teachers(models.Model):
+    _name = 'trainee_board.teachers'
 
     name = fields.Char()
+    biography = fields.Html()
+
+
+
+    # link odoo theme : https://www.odoo.com/documentation/10.0/howtos/themes.html
+    # link git tips : https://gist.github.com/aquelito/8596717
